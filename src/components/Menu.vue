@@ -1,0 +1,78 @@
+<template>
+    <div>
+      <div v-for="menu in menuData" :key="menu.ItemId">
+        <MenuItems :menu="menu" />
+      </div>
+    </div>
+  </template>
+  
+<script>
+  import MenuItems from './MenuItem.vue';
+
+  
+  export default {
+    data() {
+      return {
+        menuData: [
+          {
+            "ItemId": 1,
+            "Name" : "Maguro (ปลาทูน่า)",
+            "Price" : 200,
+            "Protein" : 23,
+            "Calories" : 108,
+            "ImageFile" : "01.jpg"
+          },
+          {
+          "ItemId": 2,
+          "Name" : "Salmon (แซลมอน)",
+          "Price" : 250,
+          "Protien" : 20,
+          "Calories" : 208,
+          "ImageFile" : "02.jpg"
+          },
+          {
+            "ItemId": 3,
+            "Name" : "Akagai (หอยแดง)",
+            "Price" : 275,
+            "Protein" : 12,
+            "Calories" : 66,
+            "ImageFile" : "03.jpg"
+          },
+          {
+           "ItemId": 4,
+           "Name" : "Akatai (ปลากะพงแดง)",
+            "Price" : 180,
+            "Protein" : 17.4,
+            "Calories" : 85,
+            "ImageFile" : "04.jpg"
+          },
+          {
+            "ItemId": 5,
+            "Name" : "Kani (ขาปู)",
+            "Price" : 210,
+            "Protein" : 15.6,
+            "Calories" : 71,
+            "ImageFile" : "05.jpg"
+          },
+          {
+            "ItemId": 6,
+            "Name" : "Ebi ( กุ้ง )",
+            "Price" : 260,
+            "Protein" : 17.3,
+            "Calories" : 90,
+            "ImageFile" : "06.jpg"
+
+          }
+        ]
+      };
+    },
+    components: {
+      MenuItems
+    }
+  };
+</script>
+  
+<style>
+  
+</style>
+  
